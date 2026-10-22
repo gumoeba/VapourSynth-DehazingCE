@@ -50,7 +50,7 @@ jobs:
         run: strip build/libDehazingCE.so
 
       - name: upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: linux-vapoursynth-dehazingce
           path: build/libDehazingCE.so
@@ -60,7 +60,7 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: configure
         run:  |
@@ -82,7 +82,7 @@ jobs:
         run: strip build/Debug/DehazingCE.dll
 
       - name: upload artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: windows-vapoursynth-dehazingce
           path: build/Debug/DehazingCE.dll
